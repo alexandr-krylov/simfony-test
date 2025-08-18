@@ -11,3 +11,7 @@ if (method_exists(Dotenv::class, 'bootEnv')) {
 if ($_SERVER['APP_DEBUG']) {
     umask(0000);
 }
+if ($_SERVER['APP_ENV'] === 'test') {
+    $_SERVER['DATABASE_URL'] = 'sqlite:///:memory:';
+    $_ENV['DATABASE_URL'] = 'sqlite:///:memory:';
+}
