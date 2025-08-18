@@ -11,3 +11,7 @@ docker exec -it php bin/console doctrine:migrations:migrate
 
 docker exec -it php cp phpunit.dist.xml phpunit.xml
 docker exec -it php bin/phpunit  
+
+## Examples of requests and responses  
+
+see in task-manager.postman_collection.json
